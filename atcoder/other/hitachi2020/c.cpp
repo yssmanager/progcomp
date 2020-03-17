@@ -5,9 +5,14 @@ using namespace std;
 using ll = long long;
 using P = pair<int,int>;
 
+
+
 int main() {
     int n;
-    a
+    cin >> n;
+    vector<int> a(n), b(n);
+    rep(i, n) cin >> a[i] >> b[i];
+
 
     return 0;
 }

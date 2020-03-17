@@ -6,8 +6,10 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-    int n;
-    a
+    string s;
+    cin >> s;
+    if(s=="AAA"||s=="BBB") cout << "No" << endl;
+    else cout << "Yes" << endl;
 
     return 0;
 }

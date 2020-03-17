@@ -6,8 +6,9 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-    int n;
-    a
+  int n;
+  cin >> n;
+  
 
-    return 0;
+  return 0;
 }

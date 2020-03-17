@@ -6,8 +6,16 @@ using ll = long long;
 using P = pair<int,int>;
 
 int main() {
-    int n;
-    a
+    ll a, b;
+    ll n, sum;
+    cin >> n >> a >> b;
+    sum = a+b;
+    ll ans = 0;
+    ans = (n/sum)*a;
+    ans += min(a,n%sum);
+
+    cout << ans << endl;
+
 
     return 0;
 }
