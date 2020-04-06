@@ -25,8 +25,35 @@ struct UnionFind {
   int size(int x) { return -d[find(x)];}
 };
 
+int deg[100005];
+vector<int> to[100005];
+
 int main() {
-  /* code */
+  int n, m, k;
+  cin >> n >> m >> k;
+  UnionFind uf(n);
+  rep(i, m) {
+    int a, b;
+    cin >> a >> b;
+    --a; --b;
+    deg[a]++;
+    deg[b]++;
+    uf.unite(a, b);
+  }
+  rep(i, k) {
+    int a, b;
+    cin >> a >> b;
+    --a; --b;
+    to[a].push_back(b);
+    to[b].push_back(a);
+  }
+  rep(i, n) {
+    int ans = uf.size(i)-1-deg[i];
+    for (int u : to[i]){
+      if (uf.same(i, u)) --ans;
+    }
+    printf("%d%c", ans, i==n-1?'\n':' ');
+  }
 
   return 0;
 }
