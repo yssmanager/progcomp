@@ -16,7 +16,37 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main() {
-  /* code */
+  int t;
+  cin >> t;
+  REP(ti, t) {
+    int n;
+    cin >> n;
+    vector<int> a(n), b(n);
+    REP(i, n) cin >> a[i];
+    REP(i, n) cin >> b[i];
+    bool ans = true;
+    bool m1 = false, p1 = false;
+    REP(i, n) {
+      if(a[i] < b[i]) {
+        if(!p1) {
+          ans = false;
+          break;
+        }
+      }else if(a[i] > b[i]) {
+        if(!m1) {
+          ans = false;
+          break;
+        }
+      }
+      if(a[i] == 1) p1 = true;
+      else if(a[i] == -1) m1 = true;
+      if(m1 && p1) {
+        ans = true;
+        break;
+      }
+    }
+    cout << (ans ? "Yes" : "No") << endl;
+  }
 
   return 0;
 }

@@ -8,15 +8,41 @@
 #define rep(i, n) FOR((i), 0, (n))
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
+#define fi first
+#define se second
+#define dup(x, y) (((x)+(y)-1)/(y))
+#define v(T) vector<T>
+#define vv(T) v(v(T))
 using namespace std;
 using ll = long long;
 using P = pair<int,int>;
+using T = tuple<int,int,int>;
+using vi = vector<int>;
+using vvi = vector<vi>;
+using vl = vector<ll>;
+using vs = vector<string>;
+using vp = vector<P>;
+using vt = vector<T>;
 
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main() {
-  /* code */
+  int n;
+  cin >> n;
+  vs s(n);
+  REP(i, n) cin >> s[i];
+  int w = s[0].size();
+  rFOR(i, 0, n-1) {
+    FOR(j, 1, w-1) {
+      if (s[i][j]=='#') {
+        FORe(k, -1, 1) {
+          if (s[i+1][j+k]=='X') s[i][j] = 'X';
+        }
+      }
+    }
+  }
+  REP(i, n) cout << s[i] << endl;
 
   return 0;
 }

@@ -7,7 +7,6 @@
 #define rREP(i, n) rFOR((i), 0, (n))
 #define rep(i, n) FOR((i), 0, (n))
 #define all(v) (v).begin(), (v).end()
-#define rall(v) (v).rbegin(), (v).rend()
 using namespace std;
 using ll = long long;
 using P = pair<int,int>;
@@ -16,7 +15,13 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int main() {
-  /* code */
+  int x;
+  cin >> x;
+  int c500 = x/500;
+  x -= c500*500;
+  int c5 = x/5;
+  int ans = c500*1000 + c5*5;
+  cout << ans << endl;
 
   return 0;
 }
