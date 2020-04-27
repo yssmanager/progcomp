@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.cpp": "cpp",
         "iostream": "cpp",
         "ostream": "cpp",
         "istream": "cpp",
@@ -13,7 +14,12 @@
         "string": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "procon-tools.home": "/mnt/c/Users/yoshi/git/mygit/progcomp/contests",
+    "files.autoSave": "afterDelay",
+    "C_Cpp.dimInactiveRegions": false
 }
